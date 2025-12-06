@@ -1,0 +1,268 @@
+Design a beautiful, premium, futuristic landing page for SanctOS, a next-generation encrypted messaging + private wallet + decentralized node network on Solana.
+
+Use the official SanctOS aesthetic:
+
+Gradient Sphere Logo (primary identity symbol) — glowing orb with smooth gradients (violet → neon lilac → soft fuchsia).
+
+Typography: clean, geometric, minimal (similar to Inter, Neue Montreal, Söhne, or Space Grotesk).
+
+Dark mode only: deep charcoal backgrounds (rgb 10,10,15), subtle grain texture, neon diffused glows.
+
+Primary colors:
+
+Electric Violet (#a75cff)
+
+Neon Lilac (#e7a7ff)
+
+Soft Fuchsia (#f099ff)
+
+Aqua Electric Blue (#5fceff)
+
+Accent elements: glassmorphism cards, blurred glows, floating particles, Solana-like neon gradients.
+
+Overall style:
+Elegant cyberpunk minimalism, privacy-centric, futuristic, premium, Apple-level polish.
+
+PAGE STRUCTURE — MUST INCLUDE ALL SECTIONS BELOW
+1. HERO SECTION (above-the-fold)
+
+A dramatic intro with large gradient sphere logo floating subtly.
+Elements to include:
+
+Huge headline: “SanctOS — The Privacy OS for Solana”
+
+Subheadline: “Encrypted messaging. Private DeFi. Decentralized nodes. A sovereign communication layer.”
+
+“Launch App” button — neon glow
+
+“Learn More” secondary button
+
+Background: floating orbs, faint Solana-like light beams
+
+Animated gradient accents
+
+A subtle holographic “matrix” dot pattern
+
+Goal: premium, mysterious, secure, powerful.
+
+2. WHAT IS SANCTOS (Overview section)
+
+Clean, 2–3 sentence explanation with iconic orb visual centerpiece.
+
+Text example:
+“SanctOS is an encrypted messaging platform and private Solana wallet built on a decentralized privacy network. No phone numbers, no servers, no metadata. All encrypted. All yours.”
+
+Design notes:
+
+Two-column layout
+
+Left = copy
+
+Right = glowing 3D sphere or holographic interface
+
+3. CORE FEATURES GRID (4–6 cards)
+
+Each feature in a glowing glass card.
+
+Feature Cards to Include:
+
+Encrypted Messaging
+“End-to-end XSalsa20 encryption with wallet-based identity.”
+
+Private DeFi Mode
+“Hide your IP, device, and metadata on every dApp.”
+
+SanctOS Nodes
+“Decentralized private relays and encrypted storage.”
+
+Kill-Switch Identity
+“Burn your old identity forever with one tap.”
+
+On-Chain Messaging PDAs
+“Serverless, censorship-resistant communication.”
+
+SanctOS Wallet
+“Fast, private, auto-signed transactions.”
+
+Visual style: neon borders, soft shadows, minimal icons.
+
+4. PRIVACY ARCHITECTURE (deep-dive)
+
+Diagram or schematic showing:
+
+Device Keys
+
+Wallet Key (identity)
+
+Shared Secret (ECDH)
+
+XSalsa20 Encryption
+
+Message PDAs
+
+Zero metadata design
+
+Node relay
+
+Style: blueprint-like, neon lines, holographic aesthetic.
+
+Section header: “Engineered for Absolute Privacy”
+
+5. PRIVATE DEFI MODE SECTION
+
+Hero-style callout with the glowing sphere split into multiple refracted beams.
+
+Copy:
+“Access any Solana dApp privately. SanctOS routes all transactions through your personal node relay, hiding your IP, device, timing, and metadata.”
+
+Include small diagrams:
+
+Wallet → Node → RPC
+
+Timing obfuscation
+
+RPC rotation
+
+6. ENCRYPTED MESSAGING SECTION
+
+Focus on clean UI mockups + encryption iconography.
+
+Text snippets:
+
+“No phone numbers.”
+
+“No emails.”
+
+“No servers.”
+
+“No metadata stored.”
+
+Design:
+
+Chat UI preview with neon accents
+
+Encrypted bubbles
+
+Lock icons
+
+7. NODES SECTION (Lite, Home, Hardware)
+
+This is a huge section — visually impressive.
+
+Show 3 card types:
+
+Lite Node: personal local relay
+
+Home Node: small device (Pi, mini-PC)
+
+Hardware Node: premium future SanctOS device
+
+Include:
+
+Points system
+
+Relay
+
+Encrypted media storage
+
+Future: CoinJoin + Stealth lanes
+
+Use floating hardware-like renders, neon traces, and glows.
+
+8. GHOST SEND (COINJOIN) SECTION
+
+Dark background, glowing fractal network animation.
+
+Text:
+“Break transaction linkability. Ghost Send mixes your transaction with others without custodial risk, making on-chain tracing impossible.”
+
+Show a simple 3-step diagram:
+
+Users submit masked inputs
+
+SanctOS node builds the combined transaction
+
+Metadata self-destructs
+
+9. ROADMAP SECTION
+
+Elegant timeline with 4 phases:
+
+MVP (messaging + wallet + private relay)
+
+Lite Nodes
+
+Encrypted media + Group chats
+
+Full decentralization (storage, CoinJoin, node network)
+
+Design: thin neon lines linking milestones.
+
+10. DOWNLOAD / LAUNCH / INSTALL SECTION
+
+Buttons for:
+
+Launch App
+
+Node Installer (coming soon)
+
+Desktop App (future)
+
+In a glass panel with glowing CTA.
+
+11. FAQ SECTION
+
+Accordion style, minimal.
+
+Include questions like:
+
+“Is SanctOS really private?”
+
+“How does encryption work?”
+
+“How do nodes protect me?”
+
+“Does SanctOS store metadata?”
+
+Dark panels, neon outline.
+
+12. FOOTER
+
+Minimal, dark, sleek.
+
+Logo (sphere)
+
+Docs link
+
+GitHub
+
+X/Twitter
+
+Legal/Privacy
+
+“© SanctOS — A Sovereign Privacy Layer for Solana”
+
+DESIGN REQUIREMENTS
+
+Modern, premium, cyber-neon Solana aesthetic
+
+Clean grid layout
+
+Glassmorphism + neon accents
+
+Floating 3D gradient spheres
+
+Soft bloom/glow effects
+
+Hover interactions
+
+Smooth scroll animations
+
+High contrast dark UI
+
+Elegant, futuristic typography
+
+Minimal but high-impact illustrations
+
+Overall vibe:
+Cryptographic. Private. Beautiful. Mysterious. Next-gen.

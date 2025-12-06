@@ -1,0 +1,243 @@
+Enhance the existing SanctOS landing page design with the following additions, while preserving the SanctOS floating orb aesthetic exactly as defined in the provided CSS (glowing gradient sphere, soft pulses, floating sparks, ethereal orb animations).
+
+Use the same visual style:
+premium dark-mode cyber-neon, glowing gradients (violet → lilac → fuchsia → aqua-blue), glassmorphism, soft bloom, geometric clean typography (Inter / Space Grotesk), Solana-like futuristic privacy aesthetic.
+
+🔵 1. KEEP THE FLOATING ORB — HERO MUST FEATURE IT PROMINENTLY
+
+Use the SanctOS orb exactly as defined:
+
+Gradient radial glow
+
+Hover scale + opacity change
+
+Pulse + floating keyframes
+
+Floating spark particles around it
+
+Place the orb:
+
+In the HERO section
+
+Front and center
+– Behind the headline
+– Slightly lifted
+– Ethereal, futuristic
+– The core of SanctOS identity
+
+Also reference it in other sections as subtle smaller floating orbs.
+
+🟣 2. UPDATE THE ROADMAP TO INCLUDE: Phase 2 (Private DeFi Mode + Group Chats)
+
+Expand the Roadmap section with a clear multi-phase timeline:
+
+Phase 1 — MVP (Current)
+
+Encrypted messaging
+
+SanctOS Embedded Wallet
+
+On-chain PDA messaging
+
+Kill-switch identity
+
+Local encryption (XSalsa20)
+
+Basic UI
+
+Stability & mainnet migration
+
+Phase 2 — Advanced Features
+
+a. Private DeFi Mode (Phase 2)
+“Private transaction relay, hide IP/device metadata, RPC rotation, and personal lite nodes.”
+
+b. Encrypted Group Chats (Phase 2)
+“Shared symmetric group keys individually encrypted per device, group key rotation, zero metadata.”
+
+Phase 3 — Decentralized Network
+
+Lite node release
+
+Encrypted media nodes
+
+Node points & incentives
+
+File sharding
+
+Optional decentralized storage
+
+Phase 4 — Ghost Layer (Full Privacy Stack)
+
+CoinJoin (Ghost Send)
+
+Multi-hop private relay
+
+Stealth addresses
+
+Metadata-less routing
+
+Hardware nodes (optional SanctOS devices)
+
+Design: glowing timeline nodes, neon connectors, animated progress.
+
+🟩 3. ADD A FULL “SANCTOS DOCS” PAGE (Separate Section or Link)
+
+Create a Docs Page with a beautiful, clean developer-friendly layout.
+
+Theme:
+
+dark minimal
+
+glowing accents
+
+floating micro orbs
+
+clean typography
+
+elegant sectioning
+
+Sections to include:
+
+A. Introduction
+
+“What is SanctOS? Why encrypted messaging on Solana?”
+
+B. Architecture Overview
+
+Wallet identity key
+
+Device key
+
+Shared secret (ECDH)
+
+XSalsa20 encryption
+
+Message PDAs
+
+Kill-switch identity
+
+Include glowing diagram nodes.
+
+C. Messaging Encryption Explained
+
+Short clear steps:
+
+Device keypair
+
+Shared secret derivation
+
+Encrypt with XSalsa20
+
+Write to PDA
+
+Decrypt locally
+
+D. Storage Model
+
+No servers
+
+No metadata
+
+All on-chain PDAs
+
+Local-only secrets
+
+E. Roadmap Deep Dive
+
+Explain each phase briefly.
+
+F. Glossary
+
+XSalsa20, ECDH, PDA, device key, shared secret, session wallet.
+
+G. FAQ
+
+Very clean accordion.
+
+H. API (Future)
+
+Placeholder: “Coming with Lite Nodes.”
+
+Design goal: professional, developer-grade, extremely readable.
+
+🟧 4. ADD NEW LANDING PAGE SECTIONS
+A. “Phase 1 Ready Today” banner
+
+Show what’s LIVE NOW:
+
+encrypted messaging
+
+wallet identity
+
+kill-switch
+
+end-to-end local encryption
+
+B. Group Chat Preview (teaser)
+
+Section showing:
+
+group encryption flow diagram
+
+future UI preview
+
+shared group key concept
+
+C. Private DeFi Mode Teaser
+
+“Coming in Phase 2” banner with futuristic Solana-style transaction graphics.
+
+🟦 5. ADD A TOP NAVIGATION BAR
+
+Minimal, clean.
+
+Items:
+
+Home
+
+Features
+
+Roadmap
+
+Docs
+
+Launch App
+
+Download Node (disabled / coming soon)
+
+Glow underline animations on hover.
+
+🟪 6. ENSURE THE ENTIRE SITE FOLLOWS THE SANCTOS BRAND AESTHETIC
+
+floating micro-orbs
+
+neon bloom accents
+
+soft glows
+
+radial-gradient backgrounds
+
+grid + geometric spacing
+
+motion that feels smooth and calming
+
+subtle particle fields
+
+cyber privacy vibe
+
+everything centered around the SanctOS sphere identity
+
+🟫 7. CALL-TO-ACTION FOOTER
+
+Include:
+
+SanctOS orb in small size
+
+“Launch App” CTA
+
+“Read the Docs” CTA
+
+Social links
+
+“© SanctOS — A Sovereign Privacy Layer for Solana”

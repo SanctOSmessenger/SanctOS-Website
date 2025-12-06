@@ -1,0 +1,301 @@
+=============================================
+PAGE 1 — Comparison Page
+=============================================
+SanctOS vs Signal vs Session vs Telegram vs WhatsApp
+A factual, technical comparison of privacy, architecture, and security.
+High-Level Comparison Table
+Feature	SanctOS	Signal	Session	Telegram	WhatsApp
+Identity	Wallet address, device keys	Phone number	Session ID	Phone number	Phone number
+Server Dependence	None (on-chain only)	Full server infra	Service nodes	Centralized	Centralized (Meta)
+Message Storage	On-chain encrypted metadata	Signal servers	Swarm nodes	Cloud servers	Meta servers
+Encryption	XSalsa20 (NaCl)	Signal Protocol	Modified Signal	Optional/partial	Signal Protocol
+Metadata Exposure	Lowest on list	Medium	Medium	High	High
+Multi-Device	Stateless, key-based	Limited	Complex	Cloud-sync	Cloud-sync
+Censorship Resistance	Highest	Low	Medium	Low	Low
+Open Source	Yes	Yes	Yes	Partial	No
+On-Chain Features	Yes	No	No	No	No
+Phone Required	No	Yes	No	Yes	Yes
+Category Breakdown
+1. Identity & Account Setup
+
+SanctOS: Wallet-based, no phone, no email, device-level keys.
+
+Signal: Phone number required, tied to real identity.
+
+Session: Anonymous Session ID.
+
+Telegram: Phone number required.
+
+WhatsApp: Phone number required; Meta ecosystem.
+
+2. Message Transport Layer
+
+SanctOS: Blockchain-based (Solana transactions). No servers, no routing hops.
+
+Signal: Messages routed via centralized Signal servers.
+
+Session: Mixnet + service nodes + storage nodes.
+
+Telegram: Fully centralized cloud servers.
+
+WhatsApp: Fully centralized Meta infrastructure.
+
+3. Encryption Model
+
+SanctOS: XSalsa20-Poly1305 + ephemeral keys, minimal and auditable.
+
+Signal: Robust Double Ratchet protocol.
+
+Session: Modified Signal to support decentralized nodes.
+
+Telegram: Default chats not E2EE, only “Secret Chats.”
+
+WhatsApp: Uses Signal protocol.
+
+4. Metadata Protection
+
+SanctOS: No IP logs, no routing metadata, no servers, no timestamps stored.
+
+Signal: IP/timing metadata visible to servers.
+
+Session: Mixnets reduce metadata but storage nodes still see pull patterns.
+
+Telegram/WhatsApp: High metadata exposure (server logs, cloud sync).
+
+5. Censorship Resistance
+
+SanctOS: Cannot be censored; messages live on-chain permanently.
+
+Signal/Session/Telegram/WhatsApp: All can be blocked at the server or network level.
+
+6. Web3 Integration
+
+SanctOS: Built for Web3, private DeFi mode, wallet-native messaging.
+
+All Others: No on-chain features, no wallet identity, no private DeFi.
+
+Summary
+
+SanctOS eliminates servers entirely and stores encrypted messages directly on-chain, making it the only fully censorship-resistant, wallet-native messenger.
+Signal protects content.
+Session decentralizes servers.
+Telegram and WhatsApp prioritize convenience.
+SanctOS delivers full decentralization, privacy, and Web3 integration.
+
+=============================================
+PAGE 2 — SanctOS Nodes Page
+=============================================
+SanctOS Nodes — What They Do (Now vs Future)
+
+Nodes are optional components that enhance privacy, performance, and decentralization.
+SanctOS works fully without them — but nodes unlock the advanced features of the ecosystem.
+
+1. Private RPC / Metadata Shield
+
+Status: Coming in Phase 2
+
+Hides IP address
+
+Hides request timing
+
+Routes all Solana RPC traffic through your node
+
+Masks messaging activity
+
+Nodes provide a privacy firewall between the user and public RPC endpoints.
+
+2. Performance & Caching
+
+Status:
+
+Basic caching → Live in Phase 1
+
+Encrypted persistent cache → Phase 2
+
+Nodes reduce latency by caching:
+
+conversation indexes
+
+message search results
+
+signature lookups
+
+account data
+
+This results in faster sync and lower RPC cost.
+
+3. Encrypted Media Storage
+
+Status:
+
+No media: Now
+
+Local encrypted storage: Phase 3
+
+Distributed encrypted file storage: Phase 4
+
+This enables:
+
+encrypted photos
+
+voice notes
+
+documents
+
+media vaults
+
+All without centralized servers.
+
+4. Relay & Mix Coordination
+
+Status:
+
+Node relays → Phase 3
+
+Multi-hop mixnet routing → Phase 4
+
+Nodes will eventually:
+
+relay encrypted packets
+
+coordinate timing obfuscation
+
+perform multi-hop routing
+
+enable background sync for offline devices
+
+5. Points & Incentives
+
+Status: Starts in Phase 2
+
+Early Light Node users earn points for:
+
+uptime
+
+caching contributions
+
+relaying (Phase 3+)
+
+storing encrypted media (Phase 3+)
+
+Phase 4 introduces:
+→ Points → Credits → Token rewards.
+
+=============================================
+LANDING PAGE — Roadmap Section Update
+=============================================
+SanctOS Roadmap (2025 Edition)
+
+The roadmap below includes all updated node architecture milestones.
+
+Phase 1 — Live Now
+MVP Foundation
+
+Encrypted 1:1 messaging
+
+SanctOS Embedded Wallet
+
+On-chain PDA messaging
+
+Kill-switch identity
+
+XSalsa20 client-side encryption
+
+Basic UI
+
+Local conversation vault
+
+Auto-clear logic
+
+Micro-node caching (browser)
+
+Mainnet migration
+
+Status: Fully live
+
+Phase 2 — In Progress
+Advanced Features
+
+Private DeFi Mode
+
+Private transaction relay
+
+IP/device metadata hiding
+
+RPC rotation via Light Nodes
+
+Light Node Release
+
+Encrypted persistent local cache
+
+Automatic IP rotation
+
+Private RPC shield
+
+Start of Points Program
+
+Encrypted Group Chats
+
+Symmetric group keys
+
+Group key rotation
+
+Zero metadata delivery
+
+Status: Development underway
+
+Phase 3 — Upcoming
+Decentralized Network Layer
+
+Encrypted Media Nodes
+
+Encrypted local media vault
+
+Node Relays
+
+Message pre-fetch + relay
+
+Always-on background sync
+
+File Sharding
+
+Optional encrypted shard splitting
+
+Advanced Lite/Full Nodes
+
+Local-first performance engine
+
+Persistent background sync capabilities
+
+Status: Planned
+
+Phase 4 — Future
+Ghost Layer (Full Privacy Network)
+
+CoinJoin (Ghost Send)
+
+Multi-party coordination
+
+Obfuscated transaction graph
+
+Multi-Hop Private Relay
+
+Metadata-less routing
+
+Node-based private pathing
+
+Stealth Addresses
+
+Private receiving keys
+
+Distributed Encrypted Storage
+
+Multi-node encrypted file sharding
+
+Hardware Nodes (Optional)
+
+Dedicated SanctOS devices
+
+Always-on relay/storage capability
+
+Status: Long-term vision

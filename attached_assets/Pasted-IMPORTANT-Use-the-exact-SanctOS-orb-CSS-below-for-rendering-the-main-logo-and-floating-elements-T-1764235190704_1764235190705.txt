@@ -1,0 +1,86 @@
+IMPORTANT — Use the exact SanctOS orb CSS below for rendering the main logo and floating elements. This orb MUST appear exactly as designed. Do not modify colors, glows, blur, or animations. Render this CSS visually in the hero section.
+
+/* ============================================================
+   🌌 SanctOS Floating Orb with ethereal particles
+   ============================================================ */
+.sanctos-orb-wrap {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 8px;
+}
+.sanctos-orb {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: auto;
+  background: radial-gradient(circle at 30% 30%, rgba(237,172,244,0.9) 0%, rgba(157,119,240,0.85) 40%, rgba(93,228,255,0.65) 80%, rgba(0,0,0,0.05) 100%);
+  box-shadow:
+    0 0 30px rgba(157,119,240,0.8),
+    0 0 70px rgba(237,172,244,0.6),
+    0 0 130px rgba(93,228,255,0.4);
+  animation: sanctosOrbPulse 4.8s ease-in-out infinite,
+             sanctosOrbFloat 6s ease-in-out infinite;
+  filter: blur(0.3px);
+  position: relative;
+  opacity: 0.9;
+}
+.sanctos-orb:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+.sanctos-orb::after {
+  content: "";
+  position: absolute;
+  top: -12px; left: -12px; right: -12px; bottom: -12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(157,119,240,0.2), transparent 70%);
+  filter: blur(25px);
+  z-index: -1;
+}
+@keyframes sanctosOrbPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+    box-shadow:
+      0 0 30px rgba(157,119,240,0.8),
+      0 0 70px rgba(237,172,244,0.6),
+      0 0 130px rgba(93,228,255,0.4);
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    box-shadow:
+      0 0 45px rgba(157,119,240,1),
+      0 0 90px rgba(237,172,244,0.9),
+      0 0 160px rgba(93,228,255,0.7);
+  }
+}
+@keyframes sanctosOrbFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+/* 🌠 Floating sparks */
+.sanctos-particles span {
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #edacf4 0%, #9d77f0 70%, transparent 100%);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: floatSpark 6s ease-in-out infinite;
+}
+.sanctos-particles span:nth-child(1) { top: 20%; left: 0%; animation-delay: 0s; }
+.sanctos-particles span:nth-child(2) { top: 10%; right: 10%; animation-delay: 1.5s; }
+.sanctos-particles span:nth-child(3) { bottom: 15%; left: 20%; animation-delay: 3s; }
+.sanctos-particles span:nth-child(4) { bottom: 5%; right: 5%; animation-delay: 4.5s; }
+.sanctos-particles span:nth-child(5) { top: 50%; left: 80%; animation-delay: 2s; }
+@keyframes floatSpark {
+  0% { transform: translateY(0) scale(1); opacity: 0.6; }
+  50% { transform: translateY(-15px) scale(1.4); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.6; }
+}
+
+
+Ensure the website’s hero section uses this exact orb, with zero stylistic changes. This orb is the SanctOS visual identity.
