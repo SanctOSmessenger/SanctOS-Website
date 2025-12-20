@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import heroBg from "@assets/generated_images/hero_background_for_sanctos.png";
-import { Menu, X, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, ArrowRight, ChevronDown, Github, Twitter } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { Link as WouterLink } from "wouter";
 
 const APP_URL = "https://messenger.sanctos.app";
+const GITHUB_URL = "https://github.com/SanctOSmessenger";
+const TWITTER_URL = "https://x.com/AutisticIcarus";
 
 export function SanctOSOrb() {
   return (
@@ -24,6 +26,24 @@ export function SanctOSOrb() {
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [socialsOpen, setSocialsOpen] = useState(false);
+  const socialsRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    function onDocClick(e: MouseEvent) {
+      if (!socialsRef.current) return;
+      if (!socialsRef.current.contains(e.target as Node)) setSocialsOpen(false);
+    }
+    function onEsc(e: KeyboardEvent) {
+      if (e.key === "Escape") setSocialsOpen(false);
+    }
+    document.addEventListener("mousedown", onDocClick);
+    document.addEventListener("keydown", onEsc);
+    return () => {
+      document.removeEventListener("mousedown", onDocClick);
+      document.removeEventListener("keydown", onEsc);
+    };
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.05] bg-background/80 backdrop-blur-md">
@@ -35,53 +55,105 @@ export function Navbar() {
           </span>
         </WouterLink>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
+
           <WouterLink
             href="/"
             className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
           >
             Home
           </WouterLink>
+
           <a
             href="/#features"
             className="text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             Features
           </a>
+
           <WouterLink
             href="/nodes"
             className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
           >
             Nodes
           </WouterLink>
+
           <WouterLink
             href="/comparison"
             className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
           >
             Comparison
           </WouterLink>
+
           <a
             href="/#roadmap"
             className="text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             Roadmap
           </a>
+
           <WouterLink
             href="/docs"
             className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
           >
             Docs
           </WouterLink>
+
+          {/* Socials dropdown (desktop) */}
+          <div ref={socialsRef} className="relative">
+            <button
+              type="button"
+              onClick={() => setSocialsOpen((v) => !v)}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
+              aria-haspopup="menu"
+              aria-expanded={socialsOpen}
+            >
+              Socials
+              <ChevronDown className="w-4 h-4 opacity-80" />
+            </button>
+
+            {socialsOpen && (
+              <div
+                className="absolute right-0 mt-3 w-44 rounded-xl border border-white/10 bg-background/95 backdrop-blur-md shadow-lg overflow-hidden"
+                role="menu"
+              >
+                <a
+                  href={GITHUB_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+                  role="menuitem"
+                  onClick={() => setSocialsOpen(false)}
+                >
+                  <Github className="w-4 h-4" />
+                  GitHub
+                </a>
+
+                <a
+                  href={TWITTER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5 transition-colors"
+                  role="menuitem"
+                  onClick={() => setSocialsOpen(false)}
+                >
+                  <Twitter className="w-4 h-4" />
+                  Twitter
+                </a>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <Button
-            variant="ghost"
-            className="text-white hover:text-primary hover:bg-white/5 opacity-50 cursor-not-allowed"
-            disabled
-          >
-            Download Node
-          </Button>
+        <Button
+  variant="ghost"
+  className="hidden xl:inline-flex text-white hover:text-primary hover:bg-white/5 opacity-50 cursor-not-allowed"
+  disabled
+>
+  Download Node
+</Button>
+
 
           {/* Launch App (external) */}
           <Button
@@ -95,9 +167,10 @@ export function Navbar() {
         </div>
 
         <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white"
-        >
+  onClick={() => setIsOpen(!isOpen)}
+  className="lg:hidden text-white"
+>
+
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
@@ -105,27 +178,65 @@ export function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden absolute top-20 left-0 right-0 bg-background border-b border-white/10 p-6 flex flex-col gap-4">
-          <WouterLink href="/" className="text-white py-2 cursor-pointer">
+          <WouterLink
+            href="/"
+            className="text-white py-2 cursor-pointer"
+            onClick={() => setIsOpen(false)}
+          >
             Home
           </WouterLink>
-          <a href="/#features" className="text-white py-2">
+
+          <a href="/#features" className="text-white py-2" onClick={() => setIsOpen(false)}>
             Features
           </a>
-          <WouterLink href="/nodes" className="text-white py-2 cursor-pointer">
+
+          <WouterLink
+            href="/nodes"
+            className="text-white py-2 cursor-pointer"
+            onClick={() => setIsOpen(false)}
+          >
             Nodes
           </WouterLink>
+
           <WouterLink
             href="/comparison"
             className="text-white py-2 cursor-pointer"
+            onClick={() => setIsOpen(false)}
           >
             Comparison
           </WouterLink>
-          <a href="/#roadmap" className="text-white py-2">
+
+          <a href="/#roadmap" className="text-white py-2" onClick={() => setIsOpen(false)}>
             Roadmap
           </a>
-          <WouterLink href="/docs" className="text-white py-2 cursor-pointer">
+
+          <WouterLink
+            href="/docs"
+            className="text-white py-2 cursor-pointer"
+            onClick={() => setIsOpen(false)}
+          >
             Docs
           </WouterLink>
+
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white py-2"
+            onClick={() => setIsOpen(false)}
+          >
+            GitHub
+          </a>
+
+          <a
+            href={TWITTER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white py-2"
+            onClick={() => setIsOpen(false)}
+          >
+            Twitter
+          </a>
 
           {/* Launch App (external) */}
           <Button asChild className="w-full bg-primary text-white rounded-full">
